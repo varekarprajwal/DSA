@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(lldb) Launch _made Prajwal",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/ll",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/prajwalpurushothamvarekar/Developer/coding/C++/DSA",
+      "program": "/Users/prajwalpurushothamvarekar/Developer/coding/C++/DSA/build/Debug/outDebug"
+    }
+  ]
+}
