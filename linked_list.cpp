@@ -1,7 +1,6 @@
 // Linked list implementation in C++
 
 #include <iostream>
-#include <iterator>
 using namespace std;
 
 // Creating a Node
@@ -35,28 +34,43 @@ Node *InsertAtEnd(Node *head, int value) {
 
 void printvalue(Node *head) {
   while (head != NULL) {
-    cout << head->value << endl;
+    cout << head->value << "\t";
     head = head->next;
   }
 }
-
+int search(Node *head, int value) {
+  Node *ptr = new Node;
+  ptr = head;
+  int count = 0;
+  while (ptr != NULL) {
+    if (ptr->value == value) {
+      return count;
+    }
+    ptr = ptr->next;
+    count++;
+  }
+  return -1;
+}
 int main() {
   Node *head;
-  int n;
+  int n = 5;
   cout << "Enter the number of node: " << endl;
-  cin >> n;
+  // cin >> n;
 
   // contunie insertion using create and insert at end
   for (int i = 0; i < n; i++) {
-    int value;
-    cout << "Enter the value of node: " << endl;
-    cin >> value;
+    int value[5] = {1, 2, 3, 4, 5};
+    // cout << "Enter the value of node: " << endl;
+    // cin >> value;
     if (i == 0) {
-      head = Create(value);
+      head = Create(value[i]);
     } else {
-      head = InsertAtEnd(head, value);
+      head = InsertAtEnd(head, value[i]);
     }
   }
+  int x;
+  x = search(head, 3);
+  cout << x;
   // print the linked list value
-    printvalue(head);
+  // printvalue(head);
 }
